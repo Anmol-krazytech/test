@@ -1,8 +1,8 @@
 import React from "react";
-import OverflowCard from "../../Components/card";
-import { _courseMetaData } from "../../Resources";
-import Spacer from "../../Components/spacer";
-import '../../../src/index.css'
+import OverflowCard from "../../../Components/card";
+import { _courseMetaData } from "../../../Resources";
+import Spacer from "../../../Components/spacer";
+import '../../../index.css'
 
 const CSE = () => {
   const courses = _courseMetaData;

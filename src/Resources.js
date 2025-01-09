@@ -1,39 +1,11 @@
 export const _courses = [
     {
         id: 1, 
-        courseName: "Civil Engineering", 
-        level: "Bachelors",
-        image: "https://images.unsplash.com/photo-1502979932800-33d311b7ce56?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        link: 'ComputerScienceEngineering'
-    },
-    {
-        id: 2, 
         courseName: "Computer Science Engineering", 
         level: "Bachelors",
-        image: "https://images.unsplash.com/photo-1502979932800-33d311b7ce56?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        image: "https://chanakyauniversity.edu.in/wp-content/uploads/2024/02/SoftwareEng.jpg",
         link: 'ComputerScienceEngineering'
-    },
-    {
-        id: 1, 
-        courseName: "Mechanical Engineering", 
-        level: "Bachelors",
-        image: "https://images.unsplash.com/photo-1502979932800-33d311b7ce56?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        link: ''
-    },
-    {
-        id: 1, 
-        courseName: "Electrical Engineering", 
-        level: "Bachelors",
-        image: "https://images.unsplash.com/photo-1502979932800-33d311b7ce56?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        link: ''
-    },
-    {
-        id: 1, 
-        courseName: "Aeronautical Engineering", 
-        level: "Bachelors",
-        image: "https://images.unsplash.com/photo-1502979932800-33d311b7ce56?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        link: ''
-    },
+    }
 ]
 
 export const _courseMetaData = [
@@ -53,20 +25,20 @@ export const _courseMetaData = [
         id: 3,
         type: "Chapters",
         image: "https://media.istockphoto.com/id/2060074942/photo/open-book-with-a-shadow-isolated-on-white.jpg?s=612x612&w=0&k=20&c=0cc7qKrHYrLsuogL81UPhbsveBdUZCqY0JlFO31dq0s=",
-        link: "#"
+        link: "ComputerScienceEngineeringChapters"
     },
-    {
-        id: 4,
-        type: "Practice Questions",
-        image: "https://img.freepik.com/premium-vector/exam-icon_1134231-1410.jpg",
-        link: "#"
-    },
-    {
-        id: 5,
-        type: "External Resources",
-        image: "https://static.vecteezy.com/system/resources/previews/051/439/795/non_2x/outgoing-call-icon-glyph-icon-for-your-website-mobile-presentation-and-logo-design-free-vector.jpg",
-        link: "#"
-    }
+    // {
+    //     id: 4,
+    //     type: "Practice Questions",
+    //     image: "https://img.freepik.com/premium-vector/exam-icon_1134231-1410.jpg",
+    //     link: "#"
+    // },
+    // {
+    //     id: 5,
+    //     type: "External Resources",
+    //     image: "https://static.vecteezy.com/system/resources/previews/051/439/795/non_2x/outgoing-call-icon-glyph-icon-for-your-website-mobile-presentation-and-logo-design-free-vector.jpg",
+    //     link: "#"
+    // }
 ]
 
 export const _computerScienceChapters = [
@@ -75,7 +47,7 @@ export const _computerScienceChapters = [
         chapter: "Concept of Basic Electrical and Electronics Engineering", 
         code: "AExE01",
         image: "https://images.unsplash.com/photo-1502979932800-33d311b7ce56?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        link: '#'
+        link: 'BEEE'
     },
     {
         id: 2, 
@@ -140,4 +112,25 @@ export const _computerScienceChapters = [
         image: "https://images.unsplash.com/photo-1502979932800-33d311b7ce56?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         link: '#'
     },
+]
+
+export const _resourceMetaData = [
+    {
+        id: 1, 
+        chapter: "Videos", 
+        image: "https://t4.ftcdn.net/jpg/02/55/94/55/360_F_255945532_gXYb4gPaatBY39i9KIte3K38KH3lJYIq.jpg",
+        link: '#'
+    },
+    {
+        id: 2, 
+        chapter: "Practice Questions", 
+        image: "https://img.freepik.com/premium-vector/exam-icon_1134231-1410.jpg",
+        link: '#'
+    },
+    {
+        id: 3, 
+        chapter: "External Resources", 
+        image: "https://static.vecteezy.com/system/resources/previews/051/439/795/non_2x/outgoing-call-icon-glyph-icon-for-your-website-mobile-presentation-and-logo-design-free-vector.jpg",
+        link: '#'
+    }
 ]
