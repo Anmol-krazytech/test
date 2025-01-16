@@ -1,0 +1,43 @@
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Redirect www to non-www (Optional)
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+# Redirect HTTP to HTTPS (Force Secure Connection)
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# Remove Trailing Slash (Optional)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule ^ %1 [R=301,L]
+
+# Custom 404 Error Page (Optional)
+# ErrorDocument 404 /404.html
+
+# Caching for Performance
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 1 day"
+  ExpiresByType image/gif "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType text/css "access plus 1 week"
+  ExpiresByType text/javascript "access plus 1 week"
+  ExpiresByType application/javascript "access plus 1 week"
+</IfModule>
+
+# Prevent Directory Browsing
+Options -Indexes
+
+# Block Access to .htaccess and Sensitive Files
+<FilesMatch "(\.htaccess|\.env|\.git|\.svn|\.php)$">
+  Require all denied
+</FilesMatch>
+
+# Rewrite Rules for SPA (Single Page Application)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]
