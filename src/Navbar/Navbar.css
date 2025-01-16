@@ -91,7 +91,7 @@
 }
 
 .nav__link {
-  color: var(--text-color);
+  color: var(--background-color);
   font-weight: var(--font-semi-bold);
   transition: color 0.4s;
   &.active {

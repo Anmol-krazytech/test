@@ -33,11 +33,11 @@ const NavbarHook = () => {
         </li>
         <li>
           <NavLink
-            to="/news"
+            to="/Courses"
             className={linkClassName}
             onClick={closeMobileMenu}
           >
-            News
+            Courses
           </NavLink>
         </li>
         <li>

@@ -35,11 +35,11 @@ const Navbar = () => {
             </li>
             <li className="nav__item">
               <NavLink
-                to="/news"
+                to="/Courses"
                 className="nav__link"
                 onClick={closeMenuOnMobile}
               >
-                News
+                Courses
               </NavLink>
             </li>
             <li className="nav__item">

@@ -1,26 +1,44 @@
-import React, { useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import React from "react";
 
-const OverflowCard = ({ id, image, courseName, level, link }) => {
-  const [externalLink, setExternalLink] = React.useState(false)
+const OverflowCard = ({
+  id,
+  title,
+  subTitle,
+  image,
+  link = null,
+  courseName = null,
+  chapterName = null,
+  material = null,
+  noLink = false
+}) => {
+  const [routeLink, setRouteLink] =  React.useState('/#');
 
-  useEffect(() => {
-    console.log(link?.toLowerCase()?.includes('http'));
-    
-    link?.toLowerCase()?.includes('http') ? setExternalLink(true) : setExternalLink(false)
+  React.useEffect(() => {
+    if (link) return setRouteLink(`${link}`);
+    if (!courseName) return setRouteLink('/#');
+    if (!chapterName) return setRouteLink(`/Courses/${courseName}`);
+    if (!material) return setRouteLink(`/Courses/${courseName}/${chapterName}`);
+
+    return setRouteLink(`/Courses/${courseName}/${chapterName}/${material}`);
   }, [])
 
+  const handleNavigation = () => {
+    if (noLink) {
+      return;
+    }
+    if (link) {
+      window.open(routeLink, '_blank');
+    } else {
+      window.open(routeLink, '_self');
+    }
+  }
+
   return (
-    <NavLink
-      to={externalLink ? `${link}` : `/${link}`}
-      target={externalLink ? "_blank" : "_self"}
-    >
-      <div style={styles.card} key={id}>
-        <img src={image} alt={courseName} style={styles.image} />
-        <h3 style={styles.courseName}>{courseName}</h3>
-        <p style={styles.level}>{level}</p>
+      <div onClick={handleNavigation} style={styles.card} key={id}>
+        <img src={image} alt={title} style={styles.image} />
+        <h3 style={styles.title}>{title}</h3>
+        <p style={styles.subTitle}>{subTitle}</p>
       </div>
-    </NavLink>
   );
 };
 
@@ -33,18 +51,19 @@ const styles = {
     textAlign: "center",
     boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
     maxWidth: "300px",
+    cursor: 'pointer'
   },
   image: {
     width: "250px",
     heigth: "250px",
     borderRadius: "8px",
   },
-  courseName: {
+  title: {
     fontSize: "1.2rem",
     color: "#118AB2", // Accent color
     margin: "0.5rem 0",
   },
-  level: {
+  subTitle: {
     fontSize: "1rem",
     color: "#073B4C", // Text color
   },
